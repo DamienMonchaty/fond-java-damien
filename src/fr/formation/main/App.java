@@ -126,7 +126,7 @@ public class App {
 
         EtudiantServiceImpl etudiantServiceImpl = new EtudiantServiceImpl();
 
-        List<Etudiant> etudiantsList = etudiantServiceImpl.afficherEtudiants();
+        List<Etudiant> etudiantsList = etudiantServiceImpl.afficher();
 
         for (Etudiant etudiant : etudiantsList) {
             System.out.println(etudiant);
@@ -134,9 +134,9 @@ public class App {
 
         System.out.println("----------------------------------------");
 
-        etudiantServiceImpl.enregistrerEtudiant(new Etudiant("NOM4", "PRENOM4", 20, "MASTER2"));
+        etudiantServiceImpl.enregistrer(new Etudiant("NOM4", "PRENOM4", 20, "MASTER2"));
 
-        etudiantsList = etudiantServiceImpl.afficherEtudiants();
+        etudiantsList = etudiantServiceImpl.afficher();
 
         for (Etudiant etudiant : etudiantsList) {
             System.out.println(etudiant);

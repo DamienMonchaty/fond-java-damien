@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import fr.formation.models.Etudiant;
-import fr.formation.services.IEtudiantService;
+import fr.formation.services.IService;
 
-public class EtudiantServiceImpl implements IEtudiantService {
+public class EtudiantServiceImpl implements IService<Etudiant> {
 
     private List<Etudiant> etudiants;
 
@@ -22,14 +22,13 @@ public class EtudiantServiceImpl implements IEtudiantService {
     }
 
     @Override
-    public List<Etudiant> afficherEtudiants() {
-       return etudiants;
+    public List<Etudiant> afficher() {
+        return etudiants;
     }
 
     @Override
-    public Etudiant enregistrerEtudiant(Etudiant etudiant) {
-        etudiants.add(etudiant);
-        return etudiant;
+    public Etudiant enregistrer(Etudiant o) {
+        etudiants.add(o);
+        return o;
     }
-
 }
